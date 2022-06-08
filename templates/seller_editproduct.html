@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/seller-signup.css">
+    <link rel="icon" href="/static/images/download.png" type="image/x-icon">
+    <title>SELLER PAGE</title>
+</head>
+<body>
+<h1 class="shopfront-title">NEXT-STORE</h1>
+<div class="container-seller">
+    <div class="seller-form">
+        <h2>SELLER EDIT AND UPDATE PRODUCT</h2>
+        <form action="/seller/update-product/{{.data.ID}}" method="POST">
+            <div> <input type="url" name="product_img" value="{{.data.Productimg}}" placeholder="Product Image Link"></div>
+            <div><input type="text" name="product_Name" value="{{ .data.Name}}" placeholder="Product Name"></div>
+            <div><input type="text" name="product_price" value="{{ .data.Price}}" placeholder="Product Price"></div>
+            <div><input type="number" name="product_quantity_left" value="{{ .data.Quantity}}" placeholder="Quantity of Product Left"></div>
+
+            <div><select name="category">
+                <option value="0">Select Product:</option>
+                <option value="Casual Men's Wear">Casual Men's Wear</option>
+                <option value="Active Men's Wear">Active Men's Wear</option>
+                <option value="Formal Men's Wear">Formal Men's Wear</option>
+            </select>
+            </div>
+            <input type="submit" value="Update Product" class="continue-btn">
+        </form>
+    </div>
+    <div class="button-div">
+        <button class="page-btn"><a href="/seller/launchproduct">Market Place</a></button>
+        <button class="page-btn"><a href="/">Home Page</a></button>
+    </div>
+</div>
+
+</body>
+</html>

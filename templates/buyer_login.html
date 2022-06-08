@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Odia&family=Dancing+Script:wght@500&family=Titillium+Web:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/buyer-signup.css">
+    <link rel="icon" href="/static/images/download.png" type="image/x-icon">
+    <title>Next CUSTOMER</title>
+</head>
+<body>
+<div class="container">
+    <h1 class="shopfront-title" style="margin-top: 0px">N E X T - S T O R E</h1>
+    <!-- Start body -->
+    <div class="shopfront-div" style="display: flex; flex-direction: row; width: 90%; height: 90vh; margin-top: -130px;">
+        <!-- <span>THANK YOU FOR SHOPING AT</span> -->
+        <!-- START BUYER LOGIN FORM -->
+
+        <div class="buyer-login-form" style="margin-right: auto">
+            <form action="/buyer/signup" method="POST">
+                <div class="sign-up">
+                    <h1 class="sign-in">Create An Account</h1>
+                </div>
+                <div class="fname">
+                    <input type="text" name="name" id="fname" required placeholder="First Name">
+                </div>
+                <div class="lname">
+                    <input type="text" id="lname" required placeholder="Last Name">
+                </div>
+                <div class="username">
+                    <input type="text" name="username" id="username" required placeholder="Username">
+                </div>
+                <div class="email">
+                    <input type="text" name="email" id="email" required placeholder="Email">
+                </div>
+                <div class="email">
+                    <input type="number" name="phonenumber" id="phonenumber" required placeholder="phone number">
+                </div>
+                <div class="password">
+                    <input type="password" name="password" id="password" required placeholder="Password">
+                </div>
+                <div class="address">
+                    <textarea name="address"  id="address" class="text-area" cols="20" rows="4" placeholder="Address"></textarea>
+                </div>
+                <div class="btn-div">
+                    <button class="submit-btn" style="width: 600px" type="submit">Sign Up</button>
+                </div>
+            </form>
+        </div>
+        <!-- END SELLER LOGIN FORM -->
+        <div class="buyer-login-form" style="margin-left: auto">
+            <form action="/buyer/login" method="POST">
+                <div class="sign-up">
+                    <h1 class="sign-in">Login</h1>
+                    <p>Already have an Account?</p>
+                </div>
+                <div class="email">
+                    <input type="text" name="email" id="buyerusername" required placeholder="Email">
+                </div>
+                <div class="password">
+                    <input type="password" name="password" id="buyerpassword" required placeholder="Password">
+                </div>
+                <div class="btn-div">
+                    <button class="submit-btn" type="submit">Login</button>
+                </div>
+
+                {{if .error}}
+                <div><h3>{{.error }}</h3></div>
+                {{end}}
+            </form>
+        </div>
+    </div>
+
+    <button class="page-btn"><a href="/seller/launchproduct">Market Place</a></button>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Odia&family=Dancing+Script:wght@500&family=Titillium+Web:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/seller-signup.css">
+    <link rel="icon" href="/static/images/download.png" type="image/x-icon">
+    <title>Next SELLER</title>
+</head>
+<style>
+    .shopfront-div{
+        background-color: #ffffff;
+        width: 50vw;
+        height: 50vh;
+        margin: auto;
+    }
+
+    .seller-login-form{
+        margin: auto;
+    }
+    .form-box{
+        width: 100%;
+        margin-left: 0;
+    }
+    .continue-btn{
+        margin-left: 8%;
+        width: 310px;
+    }
+    .page-btn{
+        padding: 0;
+        background-color: transparent;
+    }
+    .page-btn:hover{
+        color: white;
+    }
+    .redirect-link{
+        color: #000;
+        font-size: 18px;
+    }
+</style>
+<body>
+    <div class="container">
+        
+          <!-- Start body -->
+        {{if .error}}
+        <div>{{.error }}</div>
+        {{end}}
+          <div class="shopfront-div">
+            <!-- START SELLER LOGIN FORM -->
+            <h3 style="text-align: center; font-size: 30px">ADMIN LOGIN ACCOUNT</h3>
+              <div class="seller-login-form">
+                  <form action="/seller/signin" class="form-box" method="POST">
+                    <div class="email">
+                      <input type="text" name="email" id="email" required placeholder="Email">
+                  </div>
+                  <div class="password">
+                    <input type="password" name="password" id="password" required placeholder="Password">
+                </div>
+                <div class="btn-div">
+                  <button class="continue-btn">Log In</button>
+                </div>
+                
+                  </form>
+              </div>
+              <!-- END SELLER LOGIN FORM -->
+              <div>
+                  <button class="page-btn"><a href="/seller/launchproduct"class="redirect-link"; style="color: black" >Market Place</a></button>
+                  <button class="page-btn"><a href="/" class="redirect-link" style="color: black">Home Page</a></button>
+              </div>
+
+          </div>
+
+          <!-- End body -->
+        </div>
+
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/buyer-signup.css">
+    <link rel="icon" href="/static/images/download.png" type="image/x-icon">
+    <title>Buyer Page</title>
+</head>
+<body>
+<style>
+    .cart-details {
+        width: 60%;
+        height: 100vh;
+        background-color: #fff;
+        color: #000000;
+        border: 2px solid #000;
+    }
+</style>
+<div class="container-buyer" style="height: 100rem">
+
+    <div class="buyer-gohome" style=" width: 40%; margin-left: 10px">
+        <h1>OUTFITS ORDERED</h1>
+        <br>
+        <button type="submit" class="thebutton edit-product" id="start-payment-button" style="height: 75px; width: 260px">
+            <a href="/buyer/paymentdetail">CHECK OUT</a></button>
+    </div>
+
+
+
+    <div class="cart-details" style="height: auto;">
+        <h1 style="text-align: center">ITEMS ORDERED</h1>
+        <hr>
+        {{range $ind, $val := .order}}
+        <div style="display: flex; flex-direction: row" >
+            <div>
+                <h3 style="color: #000"> {{ $val.Name }}</h3>
+                <img style="height: 200px" src="{{$val.Image}}">
+                <h1 class="item-ordered">{{ $val.Price }}</h1>
+            </div>
+        </div>
+        <div>
+            <ul style="list-style-type: none; width: 35rem;">
+                <li><a href="/buyer/removeproduct/" class="thebutton delete-product">Remove From Cart</a></li>
+            </ul>
+        </div>
+        <hr>
+        {{end}}
+    </div>
+
+    <div>
+        <button class="btn"><a href="/seller/launchproduct">Market Place</a></button>
+        <button class="btn"><a href="/">Home Page</a></button>
+    </div>
+</div>
+
+</body>
+</html>
+
+

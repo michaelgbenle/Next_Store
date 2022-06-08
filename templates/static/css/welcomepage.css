@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url("/static/images/Create-eCommerce-Websites.webp");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right top;
+    background-color: antiquewhite;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+
+
+.navigation{
+    width: 100%;
+    height: 30px;
+}
+
+ul{
+
+    list-style-type: none;
+    margin-right: 20px;
+    margin: 0;
+    padding: 0;
+
+}
+
+li{
+    padding: 5px;
+    display: inline;
+    float: right;
+}
+
+a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 6px 6px;
+    color: #000;
+    font-weight: bold;
+
+
+}
+
+.seller-sign-in{
+    background-color: rgb(42, 41, 41);
+    color:#fff;
+}
+.seller-sign-in:hover{
+    background-color: #000;
+}
+
+
+.buyer-sign-in:hover{
+    background-color: #000;
+    color: rgb(221, 169, 26);
+}
+.buyer-sign-in{
+    background-color: rgb(221, 169, 26);
+    color:#000;
+}
+
+.shopfront-div{
+    width: 500px;
+    height: 220px;
+    position: relative;
+    left: 600px;
+    top: 140px;
+}
+
+.shopfront-title{
+    font-size: 50px;
+}
+
+span{
+    font-weight: lighter;
+    font-size: 60px;
+}
+
+p {
+    line-height: 20px;
+}
+
+button{
+    margin-top: 10px;
+    background-color: rgb(42, 41, 41);
+    border: none;
+    border-radius: 5px 5px;
+    padding: 3px 8px;
+
+}
+button a {
+    color: #fff;
+    font-size: 14px;
+
+}
+
+button:hover{
+    background-color: #000;
+}
+
+
+
+
+

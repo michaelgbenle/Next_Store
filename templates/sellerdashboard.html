@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Odia&family=Dancing+Script:wght@200&family=Exo+2:ital,wght@0,100;0,300;0,500;0,600;0,800;1,900&family=Titillium+Web:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/admindashboard.css">
+    <link rel="icon" href="/static/images/download.png" type="image/x-icon">
+</head>
+<style>
+    .second-container{
+        background-color: #ffc400;
+        width: 95vw;
+        height: 95vh;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .child{
+        height: 95%;
+    }
+    .child-one{
+        background-color: #ffffff;
+        width: 65%;
+        padding-left: 50px;
+    }
+    .child-two{
+       background-color: #ffffff;
+        width: 25%;
+        padding-left: 20px;
+    }
+    h1,h2 {
+        margin-top: 120px;
+    }
+    h4 {
+        margin-right: 10px;
+    }
+    .inlineParagraph {
+        display: flex;
+        margin-bottom: 40px;
+    }
+</style>
+<body>
+<!-- Container for seller page -->
+<div class="market-container">
+
+    <nav class="zone sticky topnav">
+        <ul class="main-nav">
+            <div><h1 class="logo"><a href="/" style="background-color: rgb(221,169,26); color: #000;">A D M I N - D A S H B O A R D</a></h1></div>
+
+            <li><a href="/seller/addproductspage" class="seller-sign-in">Merchandise</a> </li>
+            <li><a href="/buyerssignup" class="buyer-sign-in">Log Out</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+<div class="second-container">
+    <div class="child child-one">
+        <h1 style="align-content: center">Welcome Back {{.admin.Name}}</h1>
+        <br>
+        <h3>Profile Details</h3>
+        <br>
+        <div class="inlineParagraph"><h4>Name:</h4> <p>{{ .admin.Name}}</p></div>
+        <div class="inlineParagraph"><h4>Email:</h4><p>{{.admin.Email}}</p></div>
+        <div class="inlineParagraph"><h4>Address:</h4><p>{{.admin.Address}}</p></div>
+        <div class="inlineParagraph"><h4>Bank Name:</h4><p>{{.admin.BankName}}</p></div>
+        <div class="inlineParagraph"><h4>Account Number:</h4><p>{{.admin.AccountNumber}}</p></div>
+        <div class="inlineParagraph"><h4>Account Name:</h4><p>{{.admin.AccountName}}</p></div>
+        <div class="inlineParagraph"><h4>Mobile Number:</h4><p>{{.admin.Phonenumber}}</p></div>
+    </div>
+    <div class="child child-two">
+        <h2>UPDATES</h2>
+        <h3 style="margin-top: 10px;">Total Number of Products Published {{.msg.TotalProductLaunched}}</h3>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<footer class="zone yellow footer"><p>&copy copyright 2022 TEAM B GOLAND SQUAD 10 STACK</p></footer>
+
+
+
+</body>
+</html>
+
+
+

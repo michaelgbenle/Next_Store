@@ -1,0 +1,242 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right top;
+    background-color: antiquewhite;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.shopfront-div{
+    width: 500px;
+    height: 220px;
+    position: relative;
+    left: 20px;
+    top: 140px;
+}
+
+.shopfront-title{
+    font-size: 30px;
+    margin-top: -100px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.buyer-login-form{
+    display: flex;
+    justify-content: center;
+    width: 380px;
+    height: 450px;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 10px 18px #555454;
+}
+
+h2{
+    margin-left: 65px;
+}
+
+.sign-in{
+    margin-left: 40px;
+    margin-top: 20px;
+
+}
+
+input{
+    margin-bottom: 14px;
+    border: 0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    padding: 7px 10px;
+    border-radius: 10px;
+    box-shadow: white;
+    width: 100%;
+}
+
+.text-area{
+    border-radius: 10px;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border: none;
+    width: 100%;
+    resize: vertical;
+}
+
+.continue-btn{
+    color: white;
+    background-image: linear-gradient(to left,#0b5c2a, #2eaa12 );
+    border-radius: 10px;
+    padding: 2px 130px;
+
+    font-size: 12px;
+}
+
+.continue-btn:hover{
+    background-color: crimson;
+}
+
+
+span{
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+p {
+    line-height: 20px;
+}
+
+a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 6px 6px;
+    color: #000;
+    font-weight: bold;
+
+
+}
+
+.button-div{
+    padding-top: 20px;
+}
+
+.submit-btn{
+    padding: 2px 100px;
+    background-color: #2eaa12;
+    border-style: none;
+    cursor: pointer;
+
+}
+
+.submit-btn a{
+    color: #FFF;
+}
+
+.submit-btn:hover{
+    background-color: crimson;
+}
+
+.page-btn{
+    background-color: #000;
+    border-style: none;
+}
+
+/*.page-btn:hover {*/
+/*    background-color: #555454;*/
+/*}*/
+.page-btn a {
+    color: #FFF;
+}
+
+.market-btn{
+    margin-left: 60px;
+}
+
+.home-btn{
+    margin-left: 5px;
+}
+
+.btn-div{
+    display: flex;
+    justify-content: center;
+}
+
+
+.container-buyer{
+    background-color: #fff;
+    width: 95vw;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+.child-container{
+    border: 3px solid black;
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.buyer-functions{
+    width: 30vw;
+    height: 100%;
+    margin-left: auto;
+
+}
+
+.buyer-cart{
+    border: 2px solid red;
+    width: 40vw;
+    height: auto;
+    background-color: #fff;
+}
+
+
+
+.thebutton{
+    background-color: #febf04;
+    height: 3.5rem;
+    margin-bottom: 30px;
+    position: relative;
+    width: 70%;
+    border: 10px solid #FFF;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.thebutton:hover{
+    background-color: green;
+    color: #fff;
+}
+
+
+.btn {
+    background-color:#000;
+    border-style: none;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.btn a {
+    color: white;
+}
+.btn:hover{
+    background-color: green;
+    color: #000;
+}
+
+
+
+.second-child-container{
+    /* border: 2px solid #000; */
+    position: relative;
+    top: 30%;
+    right: 50px;
+}
+
+.cart-details {
+    width: 60%;
+    height: 100vh;
+    background-color: #fff;
+    color: white;
+}
+
+.buyer-title {
+    color: #000;
+    margin-top: 15rem;
+    margin-right: 60px;
+}
+
+.buyer-gohome {
+    margin: 100px 60px 0 0;
+}
+

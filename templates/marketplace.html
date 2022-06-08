@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Odia&family=Dancing+Script:wght@200&family=Exo+2:ital,wght@0,100;0,300;0,500;0,600;0,800;1,900&family=Titillium+Web:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/marketplace.css">
+    <link rel="icon" href="/static/images/download.png" type="image/x-icon">
+    <title>NEXT-STORE</title>
+</head>
+<body>
+<!-- Container for seller page -->
+<div class="market-container">
+
+    <nav class="zone sticky topnav">
+        <ul class="main-nav">
+            {{if .check}}
+            <div>
+                <li><a href="/seller/signup" class="seller-sign-in">Admin</a> </li><li><a href="/buyer/signup" class="buyer-sign-in">LogOut</a></li>
+                <li><a href="/buyer/signup" class="buyer-sign-in">LogOut</a></li>
+            </div>
+                {{else}}
+            <li><a href="/buyer/signup" class="buyer-sign-in">Sign up</a></li>
+                {{end}}
+<!--            <li><a href="/seller/dashboard" class="buyer-sign-in">Admin Dashboard</a></li>-->
+
+            <li><input type="text" class="search" placeholder="Search Product...."><i class="fa fa-search"> <a href="/searchproduct"></a> </i></li>
+            <div><h1 class="logo"><a href="/" style="background-color: rgb(221,169,26); color: #000;">N E X T - S T O R E</a></h1></div><h1 class="logo"></h1>
+
+
+        </ul>
+    </nav>
+
+    <div class="container zone"><img src="/static/images/happy-black-family-three-walking-colourful-shopping-bags-concept-parents-their-cute-little-daughter-over-yellow-165469014.jpeg" alt="" class="cover">
+    </div>
+
+</div>
+
+
+
+<h1>SHOP FOR YOUR FAVORITE MEN'S WEAR</h1>
+<div class="zone">
+
+    <!--        PRODUCT TEMPLATE START-->
+    <div style="display: grid; grid-template-columns: 25% 25% 25% 25%;">
+        {{range $ind, $val := .data}}
+        <div class="box zone" style="border: 1px solid black;">
+            <h1 class="price">{{ $val.Name}}</h1>
+            <h3 class="price">₦{{ $val.Price}}</h3>
+            <p class="price">Quantity Left: {{ $val.Quantity }}</p>
+            <p class="price">Category :{{ $val.Productcategory}}</p>
+            <img src="{{ $val.Productimg}}">
+<!--            <a class="price" href="/addtocart?id={{ .ID }}" style="text-decoration: none; background-color: #2eaa12; padding: 10px">BUY NOW!</a>-->
+            <a onclick="AlertFunction()" class="price" href="/buyer/addproducttocart/{{.ID}}" style="text-decoration: none; background-color: #2eaa12; color: #fff; padding: 10px">BUY NOW!</a>
+
+        </div>
+    {{end}}
+    </div>
+    <!--        PRODUCT TEMPLATE END-->
+
+
+</div>
+</div>
+
+
+</div>
+
+
+
+
+
+<footer class="zone yellow footer"><p>&copy copyright 2022 TEAM B GOLAND SQUAD 10 STACK</p></footer>
+</div>
+</div>
+<!--Script start-->
+<script>
+    function AlertFunction() {
+        alert("Add Product ? 📦");
+    }
+</script>
+<!--Script End-->
+
+</body>
+</html>
+
+
+
